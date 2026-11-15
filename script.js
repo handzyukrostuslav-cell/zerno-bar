@@ -9,7 +9,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Класична кава',
     hasMilk: false,
     desc: 'Насичений шот 100% арабіки Бразилія Можіана з нотами темного шоколаду та лісового горіха.',
-    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'S • 60 мл', price: 55 },
       { label: 'M • 90 мл', price: 65 }
@@ -22,7 +22,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Класична кава',
     hasMilk: true,
     desc: 'Класичний баланс еспресо та шовковистої молочної пінки з ніжним карамельним післясмаком.',
-    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'S • 200 мл', price: 70 },
       { label: 'M • 300 мл', price: 85 },
@@ -36,7 +36,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Класична кава',
     hasMilk: true,
     desc: 'Подвійний еспресо з тонким шаром мікропіни для тих, хто любить виразний кавовий смак.',
-    image: 'https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'S • 200 мл', price: 80 },
       { label: 'M • 260 мл', price: 95 }
@@ -49,7 +49,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Авторський напій',
     hasMilk: true,
     desc: 'Ніжний лате з домашньою вершковою карамеллю та дрібкою морської солі.',
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'M • 300 мл', price: 95 },
       { label: 'L • 400 мл', price: 110 }
@@ -62,7 +62,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Авторський напій',
     hasMilk: true,
     desc: 'Японський церемоніальний зелений чай матча, збитий із теплим молоком.',
-    image: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'S • 250 мл', price: 95 },
       { label: 'M • 350 мл', price: 110 }
@@ -75,7 +75,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Авторський напій',
     hasMilk: false,
     desc: 'Вершковий кавовий напій, збитий із натуральною мадагаскарською ваніллю та цедрою апельсина.',
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'M • 300 мл', price: 105 },
       { label: 'L • 400 мл', price: 120 }
@@ -88,7 +88,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Десерт',
     hasMilk: false,
     desc: 'Італійський десерт із печивом савоярді, просоченим нашим еспресо, ніжним сиром маскарпоне та какао.',
-    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'Стандарт • 160 г', price: 125 },
       { label: 'Велика • 240 г', price: 165 }
@@ -101,7 +101,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Випічка',
     hasMilk: false,
     desc: 'Хрусткий французький круасан на вершковому маслі з ніжним мигдалевим кремом франжипан.',
-    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: '1 шт • 130 г', price: 95 }
     ]
@@ -113,7 +113,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Десерт',
     hasMilk: false,
     desc: 'Карамелізований зовні та кремовий усередині чізкейк Сан-Себастьян з вершкового сиру.',
-    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: 'Порція • 170 г', price: 130 }
     ]
@@ -125,7 +125,7 @@ const DEFAULT_MENU = [
     categoryLabel: 'Сніданок',
     hasMilk: false,
     desc: 'Румяні фермерські сирники зі сметаною, свіжими ягодами та домашнім ягідним соусом.',
-    image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=700&q=80',
     sizes: [
       { label: '2 шт • 220 г', price: 135 },
       { label: '3 шт • 320 г', price: 175 }
@@ -134,13 +134,30 @@ const DEFAULT_MENU = [
 ];
 
 // =========================================================
-// 2. СТАН ДОДАТКУ (ЗБЕРЕЖЕННЯ В LOCALSTORAGE)
+// 2. БЕЗПЕЧНЕ ЗБЕРЕЖЕННЯ СТАНУ (ПРАЦЮЄ У ВСІХ МОБІЛЬНИХ БРАУЗЕРАХ)
 // =========================================================
 const STORAGE_KEYS = {
-  stoplist: 'zernobar_stoplist_v1',
-  preorders: 'zernobar_preorders_v1',
-  bookings: 'zernobar_bookings_v1'
+  stoplist: 'zernobar_stoplist_v2',
+  preorders: 'zernobar_preorders_v2',
+  bookings: 'zernobar_bookings_v2'
 };
+
+function safeReadStorage(key, fallback) {
+  try {
+    const raw = window.localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (err) {
+    return fallback;
+  }
+}
+
+function safeWriteStorage(key, value) {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  } catch (err) {
+    // Ігноруємо обмеження приватного режиму браузера
+  }
+}
 
 function getTodayISO() {
   const now = new Date();
@@ -149,9 +166,9 @@ function getTodayISO() {
   return local.toISOString().split('T')[0];
 }
 
-let stopList = JSON.parse(localStorage.getItem(STORAGE_KEYS.stoplist)) || {};
+let stopList = safeReadStorage(STORAGE_KEYS.stoplist, {});
 
-let preorders = JSON.parse(localStorage.getItem(STORAGE_KEYS.preorders)) || [
+let preorders = safeReadStorage(STORAGE_KEYS.preorders, [
   {
     id: 'ZB-101',
     customerName: 'Ірина',
@@ -161,9 +178,9 @@ let preorders = JSON.parse(localStorage.getItem(STORAGE_KEYS.preorders)) || [
     total: 180,
     status: 'Готується'
   }
-];
+]);
 
-let tableBookings = JSON.parse(localStorage.getItem(STORAGE_KEYS.bookings)) || [
+let tableBookings = safeReadStorage(STORAGE_KEYS.bookings, [
   {
     id: 'TBL-201',
     date: getTodayISO(),
@@ -176,16 +193,16 @@ let tableBookings = JSON.parse(localStorage.getItem(STORAGE_KEYS.bookings)) || [
     phone: '097 554 12 89',
     notes: 'Біля вікна'
   }
-];
+]);
 
 let cart = [];
 let activeCategory = 'all';
 let selectedTable = null;
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEYS.stoplist, JSON.stringify(stopList));
-  localStorage.setItem(STORAGE_KEYS.preorders, JSON.stringify(preorders));
-  localStorage.setItem(STORAGE_KEYS.bookings, JSON.stringify(tableBookings));
+  safeWriteStorage(STORAGE_KEYS.stoplist, stopList);
+  safeWriteStorage(STORAGE_KEYS.preorders, preorders);
+  safeWriteStorage(STORAGE_KEYS.bookings, tableBookings);
 }
 
 // =========================================================
@@ -194,15 +211,16 @@ function saveState() {
 const menuGrid = document.getElementById('menu-grid');
 
 function createFallbackSvg(title) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-    <rect width="800" height="500" fill="#EFE8DF"/>
-    <circle cx="400" cy="220" r="54" fill="#8B5A2B" opacity="0.18"/>
-    <text x="400" y="315" font-family="sans-serif" font-size="26" font-weight="bold" fill="#261A14" text-anchor="middle">${title}</text>
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="700" height="450" viewBox="0 0 700 450">
+    <rect width="700" height="450" fill="#EFE8DF"/>
+    <circle cx="350" cy="195" r="48" fill="#8B5A2B" opacity="0.2"/>
+    <text x="350" y="280" font-family="sans-serif" font-size="24" font-weight="bold" fill="#261A14" text-anchor="middle">${title}</text>
   </svg>`;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
 function renderMenu() {
+  if (!menuGrid) return;
   menuGrid.innerHTML = '';
 
   const filtered = DEFAULT_MENU.filter((item) => {
@@ -233,7 +251,7 @@ function renderMenu() {
 
     card.innerHTML = `
       <div class="menu-photo-wrap">
-        <img src="${item.image}" alt="${item.name}" loading="lazy">
+        <img src="${item.image}" alt="${item.name}">
         <span class="menu-cat-tag">${item.categoryLabel}</span>
         ${isSoldOut ? '<div class="sold-out-banner">Тимчасово закінчилось</div>' : ''}
       </div>
@@ -255,13 +273,11 @@ function renderMenu() {
       </div>
     `;
 
-    // Запасне зображення, якщо пропаде інтернет
     const imgEl = card.querySelector('img');
     imgEl.addEventListener('error', () => {
       imgEl.src = createFallbackSvg(item.name);
     });
 
-    // Логіка перемикання розміру чашки / порції та вибору молока
     let currentSizeIdx = 0;
     let milkExtra = 0;
     let milkLabel = item.hasMilk ? 'Звичайне молоко' : '';
@@ -292,7 +308,6 @@ function renderMenu() {
       });
     }
 
-    // Додавання у передзамовлення "З собою"
     const addBtn = card.querySelector('.add-to-cart-btn');
     addBtn.addEventListener('click', () => {
       const chosenSize = item.sizes[currentSizeIdx];
@@ -321,7 +336,6 @@ function renderMenu() {
   });
 }
 
-// Фільтрація категорій меню
 document.querySelectorAll('#menu-filters .filter-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('#menu-filters .filter-btn').forEach((b) => b.classList.remove('active'));
@@ -403,7 +417,6 @@ function updateCartUI() {
   });
 }
 
-// Оформлення передзамовлення
 document.getElementById('preorder-form').addEventListener('submit', (e) => {
   e.preventDefault();
   if (cart.length === 0) {
@@ -444,6 +457,7 @@ document.getElementById('preorder-form').addEventListener('submit', (e) => {
 const bookingDateInput = document.getElementById('booking-date');
 const bookingTimeSelect = document.getElementById('booking-time');
 const tableNodes = document.querySelectorAll('.table-node');
+const selectedTableBox = document.getElementById('selected-table-display');
 const displayTableTitle = document.getElementById('display-table-title');
 const displayTableMeta = document.getElementById('display-table-meta');
 
@@ -458,10 +472,10 @@ function refreshFloorMap() {
     .filter((b) => b.date === chosenDate && b.time === chosenTime)
     .map((b) => String(b.tableId));
 
-  // Якщо раніше обраний столик став зайнятим на інший час — скидаємо вибір
   if (selectedTable && busyTableIds.includes(selectedTable.id)) {
     selectedTable = null;
-    displayTableTitle.textContent = 'Натисніть на столик на карті ліворуч';
+    selectedTableBox.classList.remove('has-selection');
+    displayTableTitle.textContent = 'Натисніть на столик на карті';
     displayTableMeta.textContent = 'Оберіть вільний столик для продовження';
   }
 
@@ -498,10 +512,12 @@ tableNodes.forEach((node) => {
       seats: node.getAttribute('data-seats')
     };
 
+    selectedTableBox.classList.add('has-selection');
     displayTableTitle.textContent = `${selectedTable.name} • ${selectedTable.zone}`;
     displayTableMeta.textContent = `Місткість: до ${selectedTable.seats} гостей • ${bookingDateInput.value} о ${bookingTimeSelect.value}`;
 
     refreshFloorMap();
+    showToast(`Обрано ${selectedTable.name} (${selectedTable.zone})`);
   });
 });
 
@@ -519,7 +535,6 @@ bookingTimeSelect.addEventListener('change', () => {
   }
 });
 
-// Підтвердження бронювання столика
 document.getElementById('table-booking-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -545,7 +560,8 @@ document.getElementById('table-booking-form').addEventListener('submit', (e) => 
   saveState();
 
   selectedTable = null;
-  displayTableTitle.textContent = 'Натисніть на столик на карті ліворуч';
+  selectedTableBox.classList.remove('has-selection');
+  displayTableTitle.textContent = 'Натисніть на столик на карті';
   displayTableMeta.textContent = 'Оберіть вільний столик для продовження';
   e.target.reset();
 
@@ -589,7 +605,6 @@ document.getElementById('admin-login-form').addEventListener('submit', (e) => {
   }
 });
 
-// Перемикання вкладок адмінки
 document.querySelectorAll('.admin-tab').forEach((tab) => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.admin-tab').forEach((t) => t.classList.remove('active'));
@@ -605,7 +620,6 @@ function renderAdminData() {
   document.getElementById('admin-orders-count').textContent = preorders.length;
   document.getElementById('admin-bookings-count').textContent = tableBookings.length;
 
-  // 1. Список передзамовлень
   const ordersList = document.getElementById('admin-orders-list');
   if (preorders.length === 0) {
     ordersList.innerHTML = '<p class="admin-note">Активних передзамовлень поки немає.</p>';
@@ -646,7 +660,6 @@ function renderAdminData() {
     });
   }
 
-  // 2. Список бронювань столиків
   const bookingsList = document.getElementById('admin-bookings-list');
   if (tableBookings.length === 0) {
     bookingsList.innerHTML = '<p class="admin-note">Заброньованих столиків поки немає.</p>';
@@ -678,7 +691,6 @@ function renderAdminData() {
     });
   }
 
-  // 3. Керування стоп-листом меню
   const stoplistGrid = document.getElementById('admin-stoplist-grid');
   stoplistGrid.innerHTML = '';
   DEFAULT_MENU.forEach((item) => {
