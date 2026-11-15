@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
   <header class="header">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        <svg class="logo-icon" width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo-icon" width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="36" height="36" rx="10" fill="#8B5A2B"/>
           <ellipse cx="18" cy="18" rx="7.5" ry="10.5" transform="rotate(-24 18 18)" stroke="#F7F3EE" stroke-width="2.2"/>
           <path d="M14.2 9.4C17.8 13.8 18.2 22.2 21.8 26.6" stroke="#F7F3EE" stroke-width="2.2" stroke-linecap="round"/>
@@ -32,7 +32,8 @@
 
       <div class="header-actions">
         <button type="button" class="admin-trigger-btn" id="open-admin-btn" title="Вхід для бариста та адміністратора">
-          Адмін-кабінет
+          <span class="desktop-only">Адмін-кабінет</span>
+          <span class="mobile-only">Адмін</span>
         </button>
 
         <button type="button" class="cart-btn" id="open-cart-btn">
@@ -117,7 +118,7 @@
       </div>
 
       <div class="menu-grid" id="menu-grid">
-        <!-- Картки меню генеруються динамічно через js/script.js -->
+        <!-- Картки меню генеруються динамічно через script.js -->
       </div>
     </div>
   </section>
@@ -137,22 +138,24 @@
         <!-- Схема залу -->
         <div class="floor-plan-card">
           <div class="floor-controls">
-            <div class="control-group">
-              <label for="booking-date">Дата візиту</label>
-              <input type="date" id="booking-date">
-            </div>
+            <div class="floor-inputs-row">
+              <div class="control-group">
+                <label for="booking-date">Дата візиту</label>
+                <input type="date" id="booking-date">
+              </div>
 
-            <div class="control-group">
-              <label for="booking-time">Час візиту</label>
-              <select id="booking-time">
-                <option value="09:00">09:00</option>
-                <option value="10:30">10:30</option>
-                <option value="12:00" selected>12:00</option>
-                <option value="14:00">14:00</option>
-                <option value="16:00">16:00</option>
-                <option value="18:00">18:00</option>
-                <option value="19:30">19:30</option>
-              </select>
+              <div class="control-group">
+                <label for="booking-time">Час візиту</label>
+                <select id="booking-time">
+                  <option value="09:00">09:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="12:00" selected>12:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:30">19:30</option>
+                </select>
+              </div>
             </div>
 
             <div class="map-legend">
@@ -164,11 +167,11 @@
 
           <!-- Архітектурна карта залу Zerno.bar -->
           <div class="floor-map" id="floor-map">
-            <div class="map-windows-label">Панорамні вікна на вулицю Соборну</div>
+            <div class="map-windows-label">Панорамні вікна на вул. Соборну</div>
 
             <div class="map-zone zone-windows">
               <span class="zone-title">Зона біля вікна</span>
-              <div class="tables-row">
+              <div class="tables-row tables-2-col">
                 <button type="button" class="table-node" data-table-id="1" data-table-name="Стіл №1" data-zone="Біля панорамного вікна" data-seats="2">
                   <span class="table-num">№1</span>
                   <span class="table-seats">2 місця</span>
@@ -185,12 +188,12 @@
             <div class="map-middle-row">
               <div class="bar-counter">
                 <strong>Барна стійка</strong>
-                <span>Кавомашина • Вітрина десертів</span>
+                <span>Кава • Десерти</span>
               </div>
 
               <div class="map-zone zone-center">
                 <span class="zone-title">Центральний зал</span>
-                <div class="tables-row">
+                <div class="tables-row tables-center-grid">
                   <button type="button" class="table-node" data-table-id="3" data-table-name="Стіл №3" data-zone="Центральний зал" data-seats="4">
                     <span class="table-num">№3</span>
                     <span class="table-seats">4 місця</span>
@@ -224,7 +227,7 @@
 
               <div class="map-zone zone-terrace">
                 <span class="zone-title">Літня тераса</span>
-                <div class="tables-row">
+                <div class="tables-row tables-2-col">
                   <button type="button" class="table-node" data-table-id="7" data-table-name="Стіл №7" data-zone="Літня тераса" data-seats="2">
                     <span class="table-num">№7</span>
                     <span class="table-seats">2 місця</span>
@@ -248,7 +251,7 @@
 
           <div class="selected-table-box" id="selected-table-display">
             <span class="selected-label">Обраний столик:</span>
-            <strong id="display-table-title">Натисніть на столик на карті ліворуч</strong>
+            <strong id="display-table-title">Натисніть на столик на карті</strong>
             <span id="display-table-meta" class="selected-meta">Оберіть вільний столик для продовження</span>
           </div>
 
@@ -345,9 +348,7 @@
       <button type="button" class="close-drawer-btn" id="close-cart-btn" aria-label="Закрити">✕</button>
     </div>
 
-    <div class="drawer-body" id="cart-items-container">
-      <!-- Список обраних напоїв та десертів -->
-    </div>
+    <div class="drawer-body" id="cart-items-container"></div>
 
     <form class="drawer-footer" id="preorder-form">
       <div class="cart-total-row">
@@ -394,7 +395,6 @@
         <button type="button" class="close-drawer-btn" id="close-admin-btn" aria-label="Закрити">✕</button>
       </div>
 
-      <!-- Екран входу по PIN-коду -->
       <div id="admin-login-view" class="admin-login-box">
         <p>Введіть PIN-код адміністратора для доступу до передзамовлень, бронювань столиків та стоп-листа меню.</p>
         <div class="pin-hint">Демо-доступ для перегляду: PIN-код <strong>1111</strong></div>
@@ -404,7 +404,6 @@
         </form>
       </div>
 
-      <!-- Внутрішня панель адміністратора -->
       <div id="admin-dashboard-view" class="admin-dashboard hidden">
         <div class="admin-tabs">
           <button type="button" class="admin-tab active" data-admin-tab="orders">
@@ -418,17 +417,14 @@
           </button>
         </div>
 
-        <!-- Вкладка 1: Передзамовлення -->
         <div class="admin-panel active" id="tab-orders">
           <div id="admin-orders-list" class="admin-list"></div>
         </div>
 
-        <!-- Вкладка 2: Бронювання столиків -->
         <div class="admin-panel" id="tab-tables">
           <div id="admin-bookings-list" class="admin-list"></div>
         </div>
 
-        <!-- Вкладка 3: Стоп-лист меню -->
         <div class="admin-panel" id="tab-stoplist">
           <p class="admin-note">Вимкніть позицію, якщо напій або десерт тимчасово закінчився — вона одразу оновиться на сайті.</p>
           <div id="admin-stoplist-grid" class="stoplist-grid"></div>
@@ -440,6 +436,6 @@
   <!-- СПЛИВАЮЧЕ ПОВІДОМЛЕННЯ -->
   <div id="toast" class="toast">Повідомлення</div>
 
-  <script src="js/script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
