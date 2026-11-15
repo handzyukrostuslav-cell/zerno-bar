@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zerno.bar — Спешелті-кав’ярня, передзамовлення та бронювання столиків</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- НАВІГАЦІЯ -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="10" fill="#8B5A2B"/>
+          <ellipse cx="18" cy="18" rx="7.5" ry="10.5" transform="rotate(-24 18 18)" stroke="#F7F3EE" stroke-width="2.2"/>
+          <path d="M14.2 9.4C17.8 13.8 18.2 22.2 21.8 26.6" stroke="#F7F3EE" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span>Zerno<b>.bar</b></span>
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <a href="#menu">Меню та передзамовлення</a>
+        <a href="#booking">Карта столиків</a>
+        <a href="#about">Про кав’ярню</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="admin-trigger-btn" id="open-admin-btn" title="Вхід для бариста та адміністратора">
+          Адмін-кабінет
+        </button>
+
+        <button type="button" class="cart-btn" id="open-cart-btn">
+          <span>З собою</span>
+          <span class="cart-badge" id="header-cart-count">0</span>
+        </button>
+
+        <button type="button" class="burger-btn" id="burger-btn" aria-label="Меню">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ГОЛОВНИЙ ЕКРАН -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow">Спешелті-кава та свіжа випічка • Щодня 08:00–21:30</span>
+        <h1>Свіжообсмажена кава без черги та затишний столик для зустрічей</h1>
+        <p class="hero-subtitle">
+          Обирайте улюблений напій потрібного об’єму на зручний час «з собою» або бронюйте конкретний столик на інтерактивній карті кав’ярні в кілька кліків.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Замовити каву з собою</a>
+          <a href="#booking" class="btn btn-outline">Обрати столик на карті</a>
+        </div>
+
+        <div class="hero-features">
+          <div class="feature-pill">
+            <strong>100% Арабіка</strong>
+            <span>Власне свіже обсмаження</span>
+          </div>
+          <div class="feature-pill">
+            <strong>Без черги</strong>
+            <span>Готуємо рівно на ваш час</span>
+          </div>
+          <div class="feature-pill">
+            <strong>Карта залу</strong>
+            <span>Вибір столика біля вікна чи на терасі</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo-card">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85"
+            alt="Чашка свіжоприготованого капучино в Zerno.bar"
+            class="hero-img"
+          >
+          <div class="hero-floating-badge">
+            <span class="badge-dot"></span>
+            <div>
+              <strong>Зараз готуємо за 7–10 хв</strong>
+              <span>вул. Соборна, 14 • Працюємо до 21:30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- МЕНЮ З РОЗМІРАМИ ПОРЦІЙ ТА ПЕРЕДЗАМОВЛЕННЯМ -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <span class="eyebrow">Меню Zerno.bar</span>
+          <h2>Оберіть напої та десерти</h2>
+          <p class="section-desc">Вкажіть бажаний об’єм чашки або розмір порції та додайте позиції до передзамовлення «з собою»</p>
+        </div>
+
+        <div class="menu-filters" id="menu-filters">
+          <button type="button" class="filter-btn active" data-category="all">Усе меню</button>
+          <button type="button" class="filter-btn" data-category="coffee">Класична кава</button>
+          <button type="button" class="filter-btn" data-category="signature">Авторські напої</button>
+          <button type="button" class="filter-btn" data-category="desserts">Десерти та сніданки</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-grid">
+        <!-- Картки меню генеруються динамічно через js/script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ІНТЕРАКТИВНА КАРТА КАВ'ЯРНІ ТА БРОНЮВАННЯ СТОЛИКІВ -->
+  <section id="booking" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Онлайн-бронювання</span>
+        <h2>Інтерактивна карта кав’ярні</h2>
+        <p class="section-desc">
+          Оберіть дату й час візиту, натисніть на вільний столик на схемі залу та підтвердьте бронювання.
+        </p>
+      </div>
+
+      <div class="booking-layout">
+        <!-- Схема залу -->
+        <div class="floor-plan-card">
+          <div class="floor-controls">
+            <div class="control-group">
+              <label for="booking-date">Дата візиту</label>
+              <input type="date" id="booking-date">
+            </div>
+
+            <div class="control-group">
+              <label for="booking-time">Час візиту</label>
+              <select id="booking-time">
+                <option value="09:00">09:00</option>
+                <option value="10:30">10:30</option>
+                <option value="12:00" selected>12:00</option>
+                <option value="14:00">14:00</option>
+                <option value="16:00">16:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:30">19:30</option>
+              </select>
+            </div>
+
+            <div class="map-legend">
+              <span class="legend-item"><i class="dot-free"></i> Вільний</span>
+              <span class="legend-item"><i class="dot-selected"></i> Обраний</span>
+              <span class="legend-item"><i class="dot-busy"></i> Зайнятий</span>
+            </div>
+          </div>
+
+          <!-- Архітектурна карта залу Zerno.bar -->
+          <div class="floor-map" id="floor-map">
+            <div class="map-windows-label">Панорамні вікна на вулицю Соборну</div>
+
+            <div class="map-zone zone-windows">
+              <span class="zone-title">Зона біля вікна</span>
+              <div class="tables-row">
+                <button type="button" class="table-node" data-table-id="1" data-table-name="Стіл №1" data-zone="Біля панорамного вікна" data-seats="2">
+                  <span class="table-num">№1</span>
+                  <span class="table-seats">2 місця</span>
+                  <span class="table-status">Вільний</span>
+                </button>
+                <button type="button" class="table-node" data-table-id="2" data-table-name="Стіл №2" data-zone="Біля панорамного вікна" data-seats="2">
+                  <span class="table-num">№2</span>
+                  <span class="table-seats">2 місця</span>
+                  <span class="table-status">Вільний</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="map-middle-row">
+              <div class="bar-counter">
+                <strong>Барна стійка</strong>
+                <span>Кавомашина • Вітрина десертів</span>
+              </div>
+
+              <div class="map-zone zone-center">
+                <span class="zone-title">Центральний зал</span>
+                <div class="tables-row">
+                  <button type="button" class="table-node" data-table-id="3" data-table-name="Стіл №3" data-zone="Центральний зал" data-seats="4">
+                    <span class="table-num">№3</span>
+                    <span class="table-seats">4 місця</span>
+                    <span class="table-status">Вільний</span>
+                  </button>
+                  <button type="button" class="table-node" data-table-id="4" data-table-name="Стіл №4" data-zone="Центральний зал" data-seats="4">
+                    <span class="table-num">№4</span>
+                    <span class="table-seats">4 місця</span>
+                    <span class="table-status">Вільний</span>
+                  </button>
+                  <button type="button" class="table-node table-large" data-table-id="5" data-table-name="Стіл №5 (Великий)" data-zone="Центральний зал" data-seats="6">
+                    <span class="table-num">№5</span>
+                    <span class="table-seats">6 місць</span>
+                    <span class="table-status">Вільний</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-bottom-row">
+              <div class="map-entrance">Вхід</div>
+
+              <div class="map-zone zone-lounge">
+                <span class="zone-title">Тиха лаунж-зона</span>
+                <button type="button" class="table-node" data-table-id="6" data-table-name="Стіл №6 (Диван)" data-zone="Тиха лаунж-зона" data-seats="3">
+                  <span class="table-num">№6</span>
+                  <span class="table-seats">3 місця</span>
+                  <span class="table-status">Вільний</span>
+                </button>
+              </div>
+
+              <div class="map-zone zone-terrace">
+                <span class="zone-title">Літня тераса</span>
+                <div class="tables-row">
+                  <button type="button" class="table-node" data-table-id="7" data-table-name="Стіл №7" data-zone="Літня тераса" data-seats="2">
+                    <span class="table-num">№7</span>
+                    <span class="table-seats">2 місця</span>
+                    <span class="table-status">Вільний</span>
+                  </button>
+                  <button type="button" class="table-node" data-table-id="8" data-table-name="Стіл №8" data-zone="Літня тераса" data-seats="2">
+                    <span class="table-num">№8</span>
+                    <span class="table-seats">2 місця</span>
+                    <span class="table-status">Вільний</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Форма підтвердження бронювання обраного столика -->
+        <form class="booking-form-card" id="table-booking-form">
+          <span class="eyebrow">Деталі бронювання</span>
+          <h3>Підтвердження столика</h3>
+
+          <div class="selected-table-box" id="selected-table-display">
+            <span class="selected-label">Обраний столик:</span>
+            <strong id="display-table-title">Натисніть на столик на карті ліворуч</strong>
+            <span id="display-table-meta" class="selected-meta">Оберіть вільний столик для продовження</span>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="booking-guests">Кількість гостей *</label>
+              <select id="booking-guests" required>
+                <option value="1 гість">1 гість</option>
+                <option value="2 гості" selected>2 гості</option>
+                <option value="3 гості">3 гості</option>
+                <option value="4 гості">4 гості</option>
+                <option value="5–6 гостей">5–6 гостей</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-guest-name">Ваше ім’я *</label>
+              <input type="text" id="booking-guest-name" placeholder="Наприклад: Олена" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-guest-phone">Номер телефону *</label>
+            <input type="tel" id="booking-guest-phone" placeholder="+380 00 000 00 00" required>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-notes">Коментар (необов’язково)</label>
+            <input type="text" id="booking-notes" placeholder="Наприклад: потрібна розетка для ноутбука або дитячий стільчик">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Забронювати обраний столик
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- АТМОСФЕРА ТА ПЕРЕВАГИ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="eyebrow">01 / Зерно</span>
+          <h3>Власне свіже обсмаження</h3>
+          <p>Працюємо зі спешелті-лотами з Бразилії, Ефіопії та Колумбії. Обсмажуємо зерно щотижня невеликими партіями, щоб розкрити природну солодкість шоколаду, горіхів і ягід.</p>
+        </div>
+        <div class="about-card">
+          <span class="eyebrow">02 / Випічка</span>
+          <h3>Ранкова випічка та сніданки</h3>
+          <p>Щодня о 08:00 дістаємо з печі гарячі французькі круасани, готуємо ніжні сирники та класичний італійський тірамісу за авторським рецептом.</p>
+        </div>
+        <div class="about-card">
+          <span class="eyebrow">03 / Комфорт</span>
+          <h3>Швидкий Wi-Fi та розетки біля столиків</h3>
+          <p>У Zerno.bar комфортно як забігти на 5 хвилин за ранковим флет-вайтом «з собою», так і попрацювати за ноутбуком у тихій лаунж-зоні.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТИ -->
+  <footer id="contacts" class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#top" class="logo">
+          <svg class="logo-icon" width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="10" fill="#8B5A2B"/>
+            <ellipse cx="18" cy="18" rx="7.5" ry="10.5" transform="rotate(-24 18 18)" stroke="#F7F3EE" stroke-width="2.2"/>
+            <path d="M14.2 9.4C17.8 13.8 18.2 22.2 21.8 26.6" stroke="#F7F3EE" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span>Zerno<b>.bar</b></span>
+        </a>
+        <p class="footer-address">вул. Соборна, 14 • Щодня 08:00 – 21:30 • Тел: +380 68 476 37 32</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#menu">Меню</a>
+        <a href="#booking">Карта столиків</a>
+        <button type="button" class="link-as-btn" id="footer-admin-btn">Адмін-кабінет</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ВИЇЖДЖАЮЧИЙ КОШИК ПЕРЕДЗАМОВЛЕННЯ "З СОБОЮ" -->
+  <div class="drawer-overlay" id="cart-overlay"></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Кошик передзамовлення">
+    <div class="drawer-header">
+      <div>
+        <span class="eyebrow">Забрати без черги</span>
+        <h3>Передзамовлення «З собою»</h3>
+      </div>
+      <button type="button" class="close-drawer-btn" id="close-cart-btn" aria-label="Закрити">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cart-items-container">
+      <!-- Список обраних напоїв та десертів -->
+    </div>
+
+    <form class="drawer-footer" id="preorder-form">
+      <div class="cart-total-row">
+        <span>Разом до сплати:</span>
+        <strong id="cart-total-price">0 грн</strong>
+      </div>
+
+      <div class="form-group">
+        <label for="pickup-time">Коли ви заберете замовлення? *</label>
+        <select id="pickup-time" required>
+          <option value="Через 10 хвилин">Через 10 хвилин</option>
+          <option value="Через 15 хвилин" selected>Через 15 хвилин</option>
+          <option value="Через 20 хвилин">Через 20 хвилин</option>
+          <option value="Через 30 хвилин">Через 30 хвилин</option>
+          <option value="Через 45 хвилин">Через 45 хвилин</option>
+        </select>
+      </div>
+
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="preorder-name">Ваше ім’я *</label>
+          <input type="text" id="preorder-name" placeholder="Ім’я" required>
+        </div>
+        <div class="form-group">
+          <label for="preorder-phone">Телефон *</label>
+          <input type="tel" id="preorder-phone" placeholder="068 000 00 00" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">
+        Оформити передзамовлення
+      </button>
+    </form>
+  </aside>
+
+  <!-- МОДАЛЬНЕ ВІКНО: АДМІН-КАБІНЕТ ЗАКЛАДУ -->
+  <div class="modal-overlay" id="admin-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">Панель керування Zerno.bar</span>
+          <h3>Адмін-кабінет кав’ярні</h3>
+        </div>
+        <button type="button" class="close-drawer-btn" id="close-admin-btn" aria-label="Закрити">✕</button>
+      </div>
+
+      <!-- Екран входу по PIN-коду -->
+      <div id="admin-login-view" class="admin-login-box">
+        <p>Введіть PIN-код адміністратора для доступу до передзамовлень, бронювань столиків та стоп-листа меню.</p>
+        <div class="pin-hint">Демо-доступ для перегляду: PIN-код <strong>1111</strong></div>
+        <form id="admin-login-form" class="pin-form">
+          <input type="password" id="admin-pin-input" maxlength="4" placeholder="••••" required>
+          <button type="submit" class="btn btn-primary">Увійти</button>
+        </form>
+      </div>
+
+      <!-- Внутрішня панель адміністратора -->
+      <div id="admin-dashboard-view" class="admin-dashboard hidden">
+        <div class="admin-tabs">
+          <button type="button" class="admin-tab active" data-admin-tab="orders">
+            Передзамовлення (<span id="admin-orders-count">0</span>)
+          </button>
+          <button type="button" class="admin-tab" data-admin-tab="tables">
+            Бронювання столиків (<span id="admin-bookings-count">0</span>)
+          </button>
+          <button type="button" class="admin-tab" data-admin-tab="stoplist">
+            Стоп-лист меню
+          </button>
+        </div>
+
+        <!-- Вкладка 1: Передзамовлення -->
+        <div class="admin-panel active" id="tab-orders">
+          <div id="admin-orders-list" class="admin-list"></div>
+        </div>
+
+        <!-- Вкладка 2: Бронювання столиків -->
+        <div class="admin-panel" id="tab-tables">
+          <div id="admin-bookings-list" class="admin-list"></div>
+        </div>
+
+        <!-- Вкладка 3: Стоп-лист меню -->
+        <div class="admin-panel" id="tab-stoplist">
+          <p class="admin-note">Вимкніть позицію, якщо напій або десерт тимчасово закінчився — вона одразу оновиться на сайті.</p>
+          <div id="admin-stoplist-grid" class="stoplist-grid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- СПЛИВАЮЧЕ ПОВІДОМЛЕННЯ -->
+  <div id="toast" class="toast">Повідомлення</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
